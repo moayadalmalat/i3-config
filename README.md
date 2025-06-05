@@ -54,3 +54,12 @@ cp .config/i3/* ~/.config/i3/
 ```bash
 cp .config/polybar/* ~/.config/polybar/
 ```
+
+## Running tests
+
+Install `bats` using your package manager (on Debian/Ubuntu: `sudo apt-get install bats`).
+Then run all tests with:
+
+```bash
+bats tests
+```

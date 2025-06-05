@@ -2,7 +2,7 @@
 
 ## Install the packages to Proxmox 6.x
 
-##  Add the no-subscription repo to your source then update and upgrade and install vim and sudo then reboot the system.
+## Add the no-subscription repo to your sources, then update, upgrade, install vim and sudo, and reboot.
 
 ```bash
 echo "deb http://download.proxmox.com/debian/pve buster pve-no-subscription" > /etc/apt/sources.list.d/pve-enterprise.list && echo "deb http://deb.debian.org/debian buster-backports main contrib non-free" >> /etc/apt/sources.list && echo "deb-src http://deb.debian.org/debian buster-backports main contrib" >> /etc/apt/sources.list && apt install -y sudo autoclean vim && apt update && apt full-upgrade -y && apt dist-upgrade -y && apt autoremove -y && apt autoclean  && /sbin/reboot

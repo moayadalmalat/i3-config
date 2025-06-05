@@ -166,11 +166,11 @@ function printTemperature() {
 }
 
 function screensaver() {
-	trap 'exit 0' TERM INT
-	trap "setBrightness $(getBrightness); kill %%" EXIT
-	setBrightness "$screensaverBrightnessValue -fps $screensaver_fps -time $screensaver_time"
-	sleep 2147483647 &
-	wait
+        trap 'exit 0' TERM INT
+        trap "setBrightness $(getBrightness); kill %%" EXIT
+        xbacklight -set "$screensaverBrightnessValue" -steps "$screensaver_steps" -time "$screensaver_time"
+        sleep 2147483647 &
+        wait
 }
 
 case $1 in
@@ -190,10 +190,10 @@ case $1 in
 			fi
 			sendNotification
 			;;
-		set)
-			setBrightness "$2 -step $fade_fps -time $fade_time"
-			sendNotification
-			;;
+               set)
+                        xbacklight -set "$2" -steps "$fade_steps" -time "$fade_time"
+                        sendNotification
+                        ;;
 		screensaver)
 			screensaver
 			;;

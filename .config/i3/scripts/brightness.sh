@@ -35,7 +35,7 @@ timeout=1500
 defaultBrightnessChangeValue=1
 defaultTempChangeValue=100
 screensaverBrightnessValue=1
-# Transitions smoothnesss and time
+# Transitions smoothness and time
 fade_steps=1
 fade_time=100
 fade_fps=240
